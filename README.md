@@ -1,73 +1,62 @@
-<h1> Решение тестового задания "Список дел" </h1>
+<h1> Solution for test task Decathlon </h1>
 
-## Тестовое задание: Задание
+## Task
 
-### Что нужно сделать:
+### The input of the program is a CSV-like text file (see the attachment). The task is to output an JSON file with all athletes in ascending order of their places, containing all the input data plus total score and the place in the competition (in case of equal scores, athletes must share the places, e.g. 3-4 and 3-4 instead of 3 and 4). Draw an algorythm diagram using a tool you prefer. Input file should be uploaded using browser. Be sure to keep the code design simple, but allowing to easily change or add more input sources and/or output file formats. About Decathlon competition: http://en.wikipedia.org/wiki/Decathlon
 
-### — написать todo-лист
+## Implementation details:
 
-### Функционал:
+### Implemented django server.
 
-### - создание, просмотр, редактирование (изменение полей или то, что задача выполнена) и удаление задачи
+### Used DRF and JS.
 
-### - возможность прикрепления файлов к записи
+### Algorythm diagram is shown in file Algorythm.pdf.
 
-### - поля в задаче: заголовок, описание, дата завершения, прикрепленные файлы
+### All calculation logic is located in the file views.py in the api folder.
 
-### - если дата завершения истекла или задача выполнена, это должно быть визуально отмечено
+# How to install a project
 
-### Для решения задачи рекомендовалось использовать React и google firebase - указанными иструментами я на момент получения задачи я еще не владел, поэтому использовал JS в связке с DRF. Вариант на React будет реализован позднее.
-
-###
-
-## Детали реализации:
-
-### Задачи отображаются в таблице DataTables().
-
-### В части бэкенда использовалось две модели Task и File.
-
-# Как установить проект
-
-### Клонировать репозиторий и перейти в него в командной строке:
+### Clone a repository and change to it on the command line:
 
 ```
-[git clone https://github.com/AKafer/Brigada.git](https://github.com/AKafer/Test-task-TodoList.git)
-cd Test-task-TodoList/
+git clone https://github.com/AKafer/Test-task-Decathlon.git
+cd Test-task-Decathlon/
 ```
 
-### Создать и активировать виртуальное окружение:
+### Create and activate virtual environment:
 
 ```
 python -m venv venv
 source venv/Scripts/activate
 ```
 
-### Установить зависимости из файла requirements.txt:
+### Install dependencies from requirements.txt:
 
 ```
 pip install -r requirements.txt
 ```
 
-### Выполнить миграции:
+### Run migrations:
 
 ```
 cd todolist
 python manage.py migrate
 ```
 
-### Запустить проект:
+### Start project:
 
 ```
 python manage.py runserver
 ```
 
-## Стек технологий: Python 3, Django 4.1, DRF, JS, jQuery, DataTables
+## How to use:
 
-## Автор проекта - Сергей Сторожук
+```
+1. Choose a csv file with Decathlon results
+2. Press button DOWNLOAD JSON
+3. You will get json file and results will be shown in a table
+```
 
-## Планы по доработке:
+## Technology stack: Python 3, Django 4.1, DRF, JS, jQuery, DataTables
 
-````
-1. Загрзука нескольких файлов к задаче.
-2. Возможность менять прикрепленные файлы при редактировании.
-````
+## Project author - SERGEI STOROZHUK
