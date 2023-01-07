@@ -4,7 +4,7 @@ from task.models import File, Player
 
 
 class FileSerializer(serializers.ModelSerializer):
-    """Класс сериализатора файлов."""
+    """Class serializer for files."""
 
     class Meta:
         fields = '__all__'
@@ -12,7 +12,7 @@ class FileSerializer(serializers.ModelSerializer):
 
 
 class PlayerSerializer(serializers.ModelSerializer):
-    """Класс сериализатора файлов."""
+    """Class serializer for players."""
 
     class Meta:
         fields = '__all__'
