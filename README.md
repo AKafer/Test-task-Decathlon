@@ -78,7 +78,7 @@ docker build -t decathlon .
 docker run --name dec -it -p 8000:8000 decathlon
 ```
 
-### Run migrations:
+### In other terminal run migrations:
 
 ```
 docker exec -it dec bash
