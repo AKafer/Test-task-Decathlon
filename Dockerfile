@@ -8,6 +8,4 @@ RUN pip3 install -r /app/requirements.txt --no-cache-dir
 
 COPY todolist/ /app
 
-ENTRYPOINT ["python3", "manage.py", "migrate"]
-
 CMD ["python3", "manage.py", "runserver", "0:8000"]
