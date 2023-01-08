@@ -16,6 +16,8 @@
 
 # How to install a project
 
+## 1. At local computer
+
 ### Clone a repository and change to it on the command line:
 
 ```
@@ -47,6 +49,46 @@ python manage.py migrate
 
 ```
 python manage.py runserver
+```
+
+### Run site in browser:
+
+```
+http://127.0.0.1:8000/
+```
+
+## 2. In a docker container
+
+### Clone a repository and change to it on the command line:
+
+```
+git clone https://github.com/AKafer/Test-task-Decathlon.git
+cd Test-task-Decathlon/
+```
+
+### Make docker image:
+
+```
+docker build -t decathlon .
+```
+
+### Run container:
+
+```
+docker run --name dec -it -p 8000:8000 decathlon
+```
+
+### Run migrations:
+
+```
+docker exec -it dec bash
+python manage.py migrate
+```
+
+### Run site in browser:
+
+```
+http://localhost:8000/
 ```
 
 ## How to use:
