@@ -65,6 +65,15 @@ http://127.0.0.1:8000/
 git clone https://github.com/AKafer/Test-task-Decathlon.git
 cd Test-task-Decathlon/
 ```
+### If you use Linux or Mac exec:
+
+```
+cd todolist/
+chmod +x entrypoint.sh
+git add entrypoint.sh
+git commit -m "sh"
+cd ..
+```
 
 ### Make docker image:
 
