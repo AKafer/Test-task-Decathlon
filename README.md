@@ -78,13 +78,6 @@ docker build -t decathlon .
 docker run --name dec -it -p 8000:8000 decathlon
 ```
 
-### In other terminal run migrations:
-
-```
-docker exec -it dec bash
-python manage.py migrate
-```
-
 ### Run site in browser:
 
 ```
